@@ -1,0 +1,12 @@
+---
+import ProjectCard from "@components/ProjectCard.astro";
+import Main from "@layouts/main.astro"
+import projects from "../assets/projects.json"
+---
+
+
+<Main>
+    <div class="bg-gray-900 min-h-screen w-full">
+        {projects.map(p => <ProjectCard projectData={p}/>)}
+    </div>
+</Main>
