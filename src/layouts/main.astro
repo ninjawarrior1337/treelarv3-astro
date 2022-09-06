@@ -15,7 +15,6 @@ import Footer from "@components/Footer.astro";
     <body class="text-white bg-gray-900">
         <div class="min-h-screen overflow-x-hidden">
             <TopNav/>
-            <Spa defaultAnimation={false}/>
             <slot></slot>
             <BottomNav client:media="(max-width: 1024px)"></BottomNav>
             <Footer/>
