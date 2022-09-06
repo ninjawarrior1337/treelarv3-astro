@@ -14,6 +14,7 @@ specifiers:
   '@types/three': ^0.144.0
   astro: ^1.0.0
   astro-compress: ^1.0.6
+  astro-critters: ^1.0.3
   marked: ^4.1.0
   react: ^18.2.0
   react-dom: ^18.2.0
@@ -36,6 +37,7 @@ devDependencies:
   '@types/three': 0.144.0
   astro: 1.1.5
   astro-compress: 1.0.6
+  astro-critters: 1.0.3
   marked: 4.1.0
   react: 18.2.0
   react-dom: 18.2.0_react@18.2.0
@@ -1035,6 +1037,14 @@ packages:
       terser: 5.15.0
     dev: true
 
+  /astro-critters/1.0.3:
+    resolution: {integrity: sha512-dAqYbzJGmb9gIJsXvSiw1cwOJvCrMEWHCfcOsZPKLz/BFWEAmAWLLloIkTzLnpBnZWJnaKvOZksy0qXldvLLCw==}
+    dependencies:
+      critters: 0.0.16
+      deepmerge-ts: 4.2.1
+      fast-glob: 3.2.11
+    dev: true
+
   /astro/1.1.5:
     resolution: {integrity: sha512-V3uDGTHYDbrqDbCpziEgCv8uElow/Ae1LjGC7guTQTU3IXzcVbJPkIfx8uNDThQ6nZpSb38z9GsFtsNJ9A3OmQ==}
     engines: {node: ^14.18.0 || >=16.12.0, npm: '>=6.14.0'}
@@ -1440,6 +1450,17 @@ packages:
 
   /core-util-is/1.0.3:
     resolution: {integrity: sha512-ZQBvi1DcpJ4GDqanjucZ2Hj3wEO5pZDS89BWbkcrvdxksJorwUDDZamX9ldFkp9aw2lmBDLgkObEA4DWNJ9FYQ==}
+    dev: true
+
+  /critters/0.0.16:
+    resolution: {integrity: sha512-JwjgmO6i3y6RWtLYmXwO5jMd+maZt8Tnfu7VVISmEWyQqfLpB8soBswf8/2bu6SBXxtKA68Al3c+qIG1ApT68A==}
+    dependencies:
+      chalk: 4.1.2
+      css-select: 4.3.0
+      parse5: 6.0.1
+      parse5-htmlparser2-tree-adapter: 6.0.1
+      postcss: 8.4.16
+      pretty-bytes: 5.6.0
     dev: true
 
   /cross-spawn/7.0.3:
@@ -3566,6 +3587,12 @@ packages:
       unist-util-visit-children: 1.1.4
     dev: true
 
+  /parse5-htmlparser2-tree-adapter/6.0.1:
+    resolution: {integrity: sha512-qPuWvbLgvDGilKc5BoicRovlT4MtYT6JfJyBOMDsKoiT+GiuP5qyrPCnR9HcPECIJJmZh5jRndyNThnhhb/vlA==}
+    dependencies:
+      parse5: 6.0.1
+    dev: true
+
   /parse5/6.0.1:
     resolution: {integrity: sha512-Ofn/CTFzRGTTxwpNEs9PP93gXShHcTq255nzRYSKe8AkVpZY7e1fpmTfOyoIvjP5HG7Z2ZM7VS9PPhQGW2pOpw==}
     dev: true
@@ -3752,6 +3779,11 @@ packages:
     resolution: {integrity: sha512-ujppO+MkdPqoVINuDFDRLClm7D78qbDt0/NR+wp5FqEZOoTNAjPHWj17QRhu7geIHJfcNhRk1XVQmF8Bp3ye+g==}
     engines: {node: '>=10.13.0'}
     hasBin: true
+    dev: true
+
+  /pretty-bytes/5.6.0:
+    resolution: {integrity: sha512-FFw039TmrBqFK8ma/7OL3sDz/VytdtJr044/QUJtH0wK9lb9jLq9tJyIxUwtQJHwar2BqtiA4iCWSwo9JLkzFg==}
+    engines: {node: '>=6'}
     dev: true
 
   /prismjs/1.29.0:

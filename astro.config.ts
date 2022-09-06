@@ -3,8 +3,9 @@ import adapter from "@astrojs/vercel/edge";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
-
 import prefetch from "@astrojs/prefetch";
+
+import critters from "astro-critters";
 
 // https://astro.build/config
 export default defineConfig({
@@ -12,7 +13,7 @@ export default defineConfig({
     config: {
       applyBaseStyles: false
     }
-  }), compress(), prefetch()],
+  }), compress(), prefetch(), critters()],
   output: "server",
   adapter: adapter(),
   server: {
