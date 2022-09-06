@@ -14,13 +14,13 @@ export default defineConfig({
       applyBaseStyles: false
     }
   }), compress(), prefetch()],
-  output: "server",
+  // output: "server",
+  // adapter: adapter(),
   vite: {
     plugins: [
       Icons({compiler: "jsx"})
     ]
   },
-  adapter: adapter(),
   server: {
     port: 1234
   }
