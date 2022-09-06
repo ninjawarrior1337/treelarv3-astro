@@ -1,6 +1,7 @@
 ---
 import Logo3D from "@components/Logo/Logo3D";
 import Main from "@layouts/main.astro"
+import { Idol, LL } from "./idol";
 
 const colorTable = {
     Vue: ["#41B883", "https://vuejs.org"],
@@ -32,11 +33,8 @@ const colorText = (input: String): String => {
     return finalStr;
 };
 
-const currentBirthdayIdol = {
-    name: "Takami Chika",
-    color: "#f0a20b",
-    birthday: "8/1"
-}
+await LL.setup()
+const currentBirthdayIdol = await LL.getBirthdayIdol()
 ---
 
 <Main>
