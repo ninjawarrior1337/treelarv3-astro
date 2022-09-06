@@ -15,7 +15,7 @@ import Footer from "@components/Footer.astro";
         <div class="min-h-screen overflow-x-hidden">
             <TopNav/>
             <slot></slot>
-            <BottomNav client:media="(max-width: 1024px)"></BottomNav>
+            <BottomNav client:visible></BottomNav>
             <Footer/>
         </div>
     </body>
