@@ -1,5 +1,5 @@
 ---
-import Logo3D from "@components/Logo3D";
+import Logo3D from "@components/Logo/Logo3D";
 import Main from "@layouts/main.astro"
 
 const colorTable = {
@@ -41,24 +41,27 @@ const currentBirthdayIdol = {
 
 <Main>
     <div class="flex flex-col lg:flex-row items-center justify-center md:grid-cols-2 min-h-screen space-y-4">
-        <div class="lg:order-last w-[450px] h-[450px]">
-            <Logo3D client:only="react"/>
+        <div class="w-[350px] h-[450px] lg:hidden block">
+            <img width="350" src='/logo/logo2020.svg'>
         </div>
         <div class="mx-16 space-y-2">
-            <h1 class="text-4xl md:text-6xl mb-4 pb-4">
+            <h1 class="text-6xl mb-4 pb-4">
                 <span>Hi, I'm</span>
                 <span class="text-gradient-treelar cursor-pointer">Treelar</span>
             </h1>
-            <h2 class="text-3xl md:text-4xl" set:html={colorText("日本語勉強中")}></h2>
-            <h2 class="text-3xl md:text-4xl" set:html={colorText("Svelte / Vue over React")}></h2>
-            <h2 class="text-3xl md:text-4xl" set:html={colorText("ラブライブ / TOH / Amphibia")}></h2>
-            <h2 class="text-3xl md:text-4xl" set:html={colorText("I use Arch btw")}></h2>
+            <h2 class="text-4xl" set:html={colorText("日本語勉強中")}></h2>
+            <h2 class="text-4xl" set:html={colorText("Svelte / Vue over React")}></h2>
+            <h2 class="text-4xl" set:html={colorText("ラブライブ / TOH / Amphibia")}></h2>
+            <h2 class="text-4xl" set:html={colorText("I use Arch btw")}></h2>
             {
                 currentBirthdayIdol ? 
-                <h2 id="idolBirthday" class="text-2xl md:text-4xl pb-4 truncate" style={`color: ${currentBirthdayIdol.color}`}>
+                <h2 id="idolBirthday" class="text-3xl md:text-4xl pb-4 truncate" style={`color: ${currentBirthdayIdol.color}`}>
                     Happy Birthday {currentBirthdayIdol.name}!
                 </h2> : null
             }
+        </div>
+        <div class="w-[450px] h-[450px] hidden lg:block">
+            <Logo3D client:media="(min-width: 1024px)"/>
         </div>
     </div>
 </Main>

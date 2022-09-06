@@ -5,7 +5,7 @@ import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
 import prefetch from "@astrojs/prefetch";
 
-import critters from "astro-critters";
+import Icons from 'unplugin-icons/vite'
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,8 +13,13 @@ export default defineConfig({
     config: {
       applyBaseStyles: false
     }
-  }), compress(), prefetch(), critters()],
+  }), compress(), prefetch()],
   output: "server",
+  vite: {
+    plugins: [
+      Icons({compiler: "jsx"})
+    ]
+  },
   adapter: adapter(),
   server: {
     port: 1234
