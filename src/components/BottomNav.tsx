@@ -21,10 +21,10 @@ function BottomNavButton(props: BottomNavButtonProps) {
 }
 
 export default function BottomNavigation() {
-    const [navOpen, setNavOpen] = useState(import.meta.env.PROD)
+    const [navOpen, setNavOpen] = useState(import.meta.env.DEV)
     const [showLinks, setShowLinks] = useState(navOpen)
 
-    const { width, height, opacity, progress } = useSpring({
+    const { width, height, opacity } = useSpring({
         width: navOpen ? "16rem" : "4rem",
         height: navOpen ? "16rem" : "4rem",
         opacity: navOpen ? 1 : 0,
