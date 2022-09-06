@@ -52,7 +52,7 @@ export class LoveLiveUtils {
                 return i
             }
         }
-        return this.idols[1]
+        return null
     }
 }
 
