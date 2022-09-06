@@ -17,13 +17,15 @@ const ClientOnly: React.FC<PropsWithChildren<{}>> = ({children}) => {
 
 export default function Logo3D() {
     return (
-        <Canvas>
-            <ambientLight intensity={0.1} />
-            <directionalLight intensity={1} position={[-1, 1.75, 1]}></directionalLight>
-            <PerspectiveCamera makeDefault position={[12, 10, 40]} />
-            <Suspense fallback={null}>
-                <Model></Model>
-            </Suspense>
-        </Canvas>
+        <ClientOnly>
+            <Canvas>
+                <ambientLight intensity={0.1} />
+                <directionalLight intensity={1} position={[-1, 1.75, 1]}></directionalLight>
+                <PerspectiveCamera makeDefault position={[12, 10, 40]} />
+                <Suspense fallback={null}>
+                    <Model></Model>
+                </Suspense>
+            </Canvas>
+        </ClientOnly>
     )
 }
