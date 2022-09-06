@@ -3,6 +3,7 @@ import TopNav from "@components/TopNav.astro";
 import BottomNav from "@components/BottomNav"
 import "../base.css"
 import Footer from "@components/Footer.astro";
+import IdolConfetti from "@components/IdolConfetti";
 ---
 
 <html lang="en">
@@ -13,6 +14,7 @@ import Footer from "@components/Footer.astro";
     </head>
     <body class="text-white bg-gray-900">
         <div class="min-h-screen overflow-x-hidden">
+            <IdolConfetti client:only="react"></IdolConfetti>
             <TopNav/>
             <slot></slot>
             <BottomNav client:visible></BottomNav>

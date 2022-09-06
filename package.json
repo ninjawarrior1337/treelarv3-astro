@@ -17,6 +17,7 @@
     "@astrojs/vercel": "^1.0.2",
     "@iconify/json": "^2.1.103",
     "@svgr/core": "^6.3.1",
+    "@types/canvas-confetti": "^1.4.3",
     "@types/marked": "^4.0.6",
     "@types/react": "^18.0.17",
     "@types/react-dom": "^18.0.6",
@@ -33,6 +34,7 @@
     "@react-spring/web": "^9.5.2",
     "@react-three/drei": "^9.26.1",
     "@react-three/fiber": "^8.7.1",
+    "canvas-confetti": "^1.5.1",
     "three": "^0.144.0"
   }
 }
