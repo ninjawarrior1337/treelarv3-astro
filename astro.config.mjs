@@ -1,5 +1,5 @@
 import { defineConfig } from 'astro/config';
-import adapter from "@astrojs/vercel/edge";
+import adapter from "@astrojs/vercel/serverless";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
@@ -14,8 +14,8 @@ export default defineConfig({
       applyBaseStyles: false
     }
   }), compress(), prefetch()],
-  // output: "server",
-  // adapter: adapter(),
+  output: "server",
+  adapter: adapter(),
   vite: {
     plugins: [
       Icons({compiler: "jsx"})
