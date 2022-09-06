@@ -31,4 +31,4 @@ export function Model(props: GroupProps) {
   );
 }
 
-useGLTF.preload("/logo2020.glb");
+// useGLTF.preload("/logo2020.glb");
