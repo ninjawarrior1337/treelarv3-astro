@@ -3,6 +3,7 @@ import {Spa} from "astro-spa"
 import TopNav from "@components/TopNav.astro";
 import BottomNav from "@components/BottomNav"
 import "../base.css"
+import Footer from "@components/Footer.astro";
 ---
 
 <html lang="en">
@@ -14,8 +15,10 @@ import "../base.css"
     <body class="text-white bg-gray-900">
         <div class="min-h-screen overflow-x-hidden">
             <TopNav/>
+            <Spa defaultAnimation={false}/>
             <slot></slot>
             <BottomNav client:media="(max-width: 1024px)"></BottomNav>
+            <Footer/>
         </div>
     </body>
 </html>
