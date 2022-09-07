@@ -19,7 +19,10 @@ const currentBirthdayIdol = await LL.getBirthdayIdol()
     </head>
     <body class="text-white bg-gray-900">
         <div class="min-h-screen overflow-x-hidden">
-            <IdolConfetti colors={currentBirthdayIdol ? [currentBirthdayIdol.color] : undefined} client:only="react"></IdolConfetti>
+            {
+                currentBirthdayIdol ?
+                <IdolConfetti colors={[currentBirthdayIdol.color]} client:only="react"></IdolConfetti> : null
+            }
             <!-- <TopNav/> -->
             <slot></slot>
             <BottomNav client:visible></BottomNav>
