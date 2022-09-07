@@ -53,7 +53,7 @@ const currentBirthdayIdol = await LL.getBirthdayIdol()
             <h2 class="text-2xl lg:text-4xl" set:html={colorText("I use Arch btw")}></h2>
             {
                 currentBirthdayIdol ? 
-                <h2 id="idolBirthday" class="text-3xl md:text-4xl pb-4 truncate" style={`color: ${currentBirthdayIdol.color}`}>
+                <h2 id="idolBirthday" class="text-2xl lg:text-4xl pb-4 truncate" style={`color: ${currentBirthdayIdol.color}`}>
                     Happy Birthday {currentBirthdayIdol.name}!
                 </h2> : null
             }
