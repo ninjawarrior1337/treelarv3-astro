@@ -85,7 +85,7 @@ export default function BottomNavigation() {
                 ) : (
                     <>
                         {
-                            [...Array(9).keys()].map(v => <div className="bg-black"></div>)
+                            [...Array(9).keys()].map(v => <div key={v} className="bg-black"></div>)
                         }
                     </>
                 )
