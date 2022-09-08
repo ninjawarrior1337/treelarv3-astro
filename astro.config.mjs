@@ -13,7 +13,7 @@ export default defineConfig({
       applyBaseStyles: false
     }
   }), prefetch()],
-  output: "server",
+  output: process.env["VERCEL"] ? "static" : "server",
   adapter: process.env["VERCEL"] ? vercel() : cloudflare(),
   vite: {
     plugins: [Icons({
