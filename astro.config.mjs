@@ -1,6 +1,6 @@
 import { defineConfig } from 'astro/config';
-import adapter from "@astrojs/vercel/edge";
-// import adapter from "@astrojs/cloudflare"
+import vercel from "@astrojs/vercel/serverless";
+import cloudflare from "@astrojs/cloudflare"
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import prefetch from "@astrojs/prefetch";
@@ -14,7 +14,7 @@ export default defineConfig({
     }
   }), prefetch()],
   output: "server",
-  adapter: adapter(),
+  adapter: process.env["VERCEL"] ? vercel() : cloudflare(),
   vite: {
     plugins: [Icons({
       compiler: "jsx",
