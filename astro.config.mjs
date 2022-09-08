@@ -4,8 +4,7 @@ import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import compress from "astro-compress";
 import prefetch from "@astrojs/prefetch";
-
-import Icons from 'unplugin-icons/vite'
+import Icons from 'unplugin-icons/vite';
 
 // https://astro.build/config
 export default defineConfig({
@@ -17,9 +16,9 @@ export default defineConfig({
   output: "server",
   adapter: adapter(),
   vite: {
-    plugins: [
-      Icons({compiler: "jsx"})
-    ]
+    plugins: [Icons({
+      compiler: "jsx",
+    })]
   },
   server: {
     port: 1234
