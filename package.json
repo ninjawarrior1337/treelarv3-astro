@@ -36,6 +36,7 @@
     "@react-three/drei": "^9.26.1",
     "@react-three/fiber": "^8.7.1",
     "canvas-confetti": "^1.5.1",
-    "three": "^0.144.0"
+    "three": "^0.144.0",
+    "web-streams-polyfill": "^3.2.1"
   }
 }
