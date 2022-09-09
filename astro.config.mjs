@@ -18,8 +18,7 @@ export default defineConfig({
   adapter: cloudflare(),
   vite: {
     plugins: [Icons({
-      compiler: "jsx",
-      jsx: "react"
+      compiler: "svelte",
     })]
   },
   server: {
