@@ -7,7 +7,7 @@ specifiers:
   '@astrojs/svelte': ^1.0.0
   '@astrojs/tailwind': ^1.0.0
   '@astrojs/vercel': ^1.0.2
-  '@iconify/json': ^2.1.104
+  '@iconify/json': ^2.1.105
   '@react-spring/web': ^9.5.2
   '@react-three/drei': ^9.29.1
   '@react-three/fiber': ^8.7.2
@@ -24,7 +24,7 @@ specifiers:
   marked: ^4.1.0
   react: ^18.2.0
   react-dom: ^18.2.0
-  svelte: ^3.46.4
+  svelte: ^3.50.1
   three: ^0.144.0
   unplugin-icons: ^0.14.9
   web-streams-polyfill: ^3.2.1
@@ -44,7 +44,7 @@ devDependencies:
   '@astrojs/svelte': 1.0.0_svelte@3.50.1
   '@astrojs/tailwind': 1.0.0
   '@astrojs/vercel': 1.0.2
-  '@iconify/json': 2.1.104
+  '@iconify/json': 2.1.105
   '@svgr/core': 6.3.1
   '@types/canvas-confetti': 1.4.3
   '@types/marked': 4.0.7
@@ -535,8 +535,8 @@ packages:
     dev: true
     optional: true
 
-  /@iconify/json/2.1.104:
-    resolution: {integrity: sha512-wPD/EzHNbGKjPumkyXSVF0EMb6dEBmR50yButPl35aW1/AO9TcJiVpCbvVk9iwpfje+yx/pfaFdY6L78sOUuMw==}
+  /@iconify/json/2.1.105:
+    resolution: {integrity: sha512-D78gRq6TAHW443TqF2+gR6cXD/zChraxlK1r+YUwKgTaOg0o7oxmpjgHpjuK9Q9ZUhUmeRiTbqP6eOL9X48N2Q==}
     dependencies:
       '@iconify/types': 2.0.0
       pathe: 0.3.7
@@ -1485,7 +1485,7 @@ packages:
     hasBin: true
     dependencies:
       caniuse-lite: 1.0.30001393
-      electron-to-chromium: 1.4.245
+      electron-to-chromium: 1.4.246
       node-releases: 2.0.6
       update-browserslist-db: 1.0.7_browserslist@4.21.3
     dev: true
@@ -1992,8 +1992,8 @@ packages:
     resolution: {integrity: sha512-I88TYZWc9XiYHRQ4/3c5rjjfgkjhLyW2luGIheGERbNQ6OY7yTybanSpDXZa8y7VUP9YmDcYa+eyq4ca7iLqWA==}
     dev: true
 
-  /electron-to-chromium/1.4.245:
-    resolution: {integrity: sha512-kUN8QXmqHAN8phxjF3QpHeX7CbXGXadSngx9r1O/S9jt+uC0O/vjPi/9+8/Mk3sKewLLMrjpBJZMfVpPCdkG3g==}
+  /electron-to-chromium/1.4.246:
+    resolution: {integrity: sha512-/wFCHUE+Hocqr/LlVGsuKLIw4P2lBWwFIDcNMDpJGzyIysQV4aycpoOitAs32FT94EHKnNqDR/CVZJFbXEufJA==}
     dev: true
 
   /emmet/2.3.6:
