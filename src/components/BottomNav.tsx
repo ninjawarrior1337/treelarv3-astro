@@ -5,21 +5,6 @@ import FaHome from "~icons/fa/home"
 import { useState } from "react"
 import { useSpring, animated, config } from "@react-spring/web"
 
-type BottomNavButtonProps = {
-    onClick: () => void
-}
-
-function BottomNavButton(props: BottomNavButtonProps) {
-    return (
-        <button
-            onClick={() => props.onClick()}
-            className="fixed bottom-5 right-5 w-16 h-16 focus:outline-none bg-gradient-to-tr to-aqours from-muse rounded shadow text-center lg:hidden text-5xl border-2 origin-bottom-right text-white"
-        >
-            <span className="font-light text-center">=</span>
-        </button>
-    )
-}
-
 export default function BottomNavigation() {
     const [navOpen, setNavOpen] = useState(import.meta.env.DEV)
     const [showLinks, setShowLinks] = useState(navOpen)
