@@ -12,7 +12,7 @@
   "devDependencies": {
     "@astrojs/cloudflare": "^1.0.2",
     "@astrojs/prefetch": "^0.0.7",
-    "@astrojs/react": "^1.1.1",
+    "@astrojs/react": "^1.0.0",
     "@astrojs/tailwind": "^1.0.0",
     "@astrojs/vercel": "^1.0.2",
     "@iconify/json": "^2.1.104",
@@ -28,6 +28,7 @@
     "marked": "^4.1.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
+    "svelte": "^3.46.4",
     "unplugin-icons": "^0.14.9"
   },
   "dependencies": {

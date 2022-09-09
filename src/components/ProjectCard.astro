@@ -12,7 +12,7 @@ export interface Props {
 
 const {projectData} = Astro.props
 
-const descriptionHTML = marked(projectData.description)
+const descriptionHTML = marked(projectData.description!!)
 ---
 
 <div class="w-10/12 mx-auto p-8 my-16 shadow-xl bg-gray-800 rounded-sm">
