@@ -13,7 +13,7 @@ export default function IdolConfetti(props: ConfettiProps) {
 
     useEffect(() => {
         let interval: number;
-        interval = setInterval(() => {
+        interval = window.setInterval(() => {
             if(props.colors) {
                 confetti({
                     particleCount: 1,
