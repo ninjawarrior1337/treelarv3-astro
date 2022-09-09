@@ -52,7 +52,7 @@ export class LoveLiveUtils {
                 return i
             }
         }
-        return null
+        return import.meta.env.DEV ? this.idols.find((v) => v.name === "Wakana Shiki") || null : null
     }
 }
 

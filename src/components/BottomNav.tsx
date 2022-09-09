@@ -47,7 +47,7 @@ export default function BottomNavigation() {
         <animated.div
             onClick={toggleNav}
             style={{ width, height }}
-            className="w-64 h-64 focus:outline-none shadow-xl fixed lg:hidden bottom-5 right-5 grid grid-cols-3 grid-rows-3 gap-2 bg-gradient-to-tr via-treelar to-treelar from-muse p-2 rounded origin-bottom-right text-white"
+            className="w-64 h-64 select-none cursor-pointer shadow-xl border-2 fixed bottom-6 right-6 grid grid-cols-3 grid-rows-3 gap-2 bg-gradient-to-tr via-treelar to-treelar from-muse p-2 rounded text-white"
         >
             {
                 showLinks ? (
@@ -82,7 +82,13 @@ export default function BottomNavigation() {
                             <span>Anime</span>
                         </animated.a>
                     </>
-                ) : null
+                ) : (
+                    <>
+                        {
+                            [...Array(9).keys()].map(v => <div key={v} className="bg-black"></div>)
+                        }
+                    </>
+                )
             }
         </animated.div>
     )

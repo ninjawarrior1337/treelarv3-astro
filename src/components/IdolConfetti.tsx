@@ -1,16 +1,20 @@
 import { useCallback, useEffect, useRef } from "react";
-import * as confetti from "canvas-confetti"
+import confetti from "canvas-confetti"
 
-export default function IdolConfetti() {
-    const confettiRef = useRef<confetti.CreateTypes>()
+type ConfettiProps = {
+    colors?: string[]
+}
+
+export default function IdolConfetti(props: ConfettiProps) {
+
     const randomInRange = useCallback((min: number, max: number) => {
         return Math.random() * (max - min) + min;
     }, [])
 
     useEffect(() => {
-        let interval;
-        if(confettiRef.current) {
-            interval = setInterval(() => {
+        let interval: number;
+        interval = setInterval(() => {
+            if(props.colors) {
                 confetti({
                     particleCount: 1,
                     startVelocity: 0,
@@ -19,21 +23,22 @@ export default function IdolConfetti() {
                         x: Math.random(),
                         y: Math.random() - 0.5
                     },
-                    colors: ["#3399ff"],
+                    colors: props.colors,
                     shapes: ["square", "circle"],
                     gravity: randomInRange(0.4, 0.6),
                     scalar: randomInRange(0.4, 1),
                     drift: randomInRange(-0.4, 0.4)
                 })
-            }, 10)
-        }
+            }
+        }, 10)
+
 
         return () => {
             clearInterval(interval)
         }
     }, [])
 
-    
+
     return (
         <></>
     )

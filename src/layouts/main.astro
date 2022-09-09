@@ -1,9 +1,16 @@
 ---
+import "web-streams-polyfill/es2018";
+
 import TopNav from "@components/TopNav.astro";
 import BottomNav from "@components/BottomNav"
-import "../base.css"
 import Footer from "@components/Footer.astro";
 import IdolConfetti from "@components/IdolConfetti";
+import "../base.css"
+
+import {LL} from "src/pages/idol"
+
+await LL.setup()
+const currentBirthdayIdol = await LL.getBirthdayIdol()
 ---
 
 <html lang="en">
@@ -14,8 +21,11 @@ import IdolConfetti from "@components/IdolConfetti";
     </head>
     <body class="text-white bg-gray-900">
         <div class="min-h-screen overflow-x-hidden">
-            <IdolConfetti client:only="react"></IdolConfetti>
-            <TopNav/>
+            {
+                currentBirthdayIdol ?
+                <IdolConfetti colors={[currentBirthdayIdol.color]} client:only="react"></IdolConfetti> : null
+            }
+            <!-- <TopNav/> -->
             <slot></slot>
             <BottomNav client:visible></BottomNav>
             <Footer/>

@@ -1,11 +1,10 @@
 import { defineConfig } from 'astro/config';
-import adapter from "@astrojs/vercel/serverless";
+import vercel from "@astrojs/vercel/static";
+import cloudflare from "@astrojs/cloudflare"
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
-import compress from "astro-compress";
 import prefetch from "@astrojs/prefetch";
-
-import Icons from 'unplugin-icons/vite'
+import Icons from 'unplugin-icons/vite';
 
 import { visualizer } from "rollup-plugin-visualizer";
 
@@ -15,9 +14,9 @@ export default defineConfig({
     config: {
       applyBaseStyles: false
     }
-  }), compress(), prefetch()],
+  }), prefetch()],
   output: "server",
-  adapter: adapter(),
+  adapter: cloudflare(),
   vite: {
     plugins: [
       Icons({compiler: "jsx"}),

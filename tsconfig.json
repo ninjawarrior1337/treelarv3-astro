@@ -13,8 +13,11 @@
     "noEmit": true,
     // Enable strict type checking.
     "strict": false,
+    "strictNullChecks": true,
     // Error when a value import is only used as a type.
     "importsNotUsedAsValues": "error",
+    "allowSyntheticDefaultImports": true,
+    "jsx": "react-jsx",
     "baseUrl": ".",
     "paths": {
       "@components/*": ["src/components/*"],
