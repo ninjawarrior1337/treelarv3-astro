@@ -1,9 +1,9 @@
 ---
 // import "web-streams-polyfill/es2018";
 
-import TopNav from "@components/TopNav.astro";
+// import TopNav from "@components/TopNav.astro";
 import BottomNav from "@components/BottomNav.svelte"
-import Footer from "@components/Footer.astro";
+import Footer from "@components/Footer.svelte";
 import IdolConfetti from "@components/IdolConfetti.svelte";
 import "../base.css"
 
@@ -11,6 +11,7 @@ import {LL} from "src/pages/idol"
 
 await LL.setup()
 const currentBirthdayIdol = await LL.getBirthdayIdol()
+const {pathname} = Astro.url
 ---
 
 <html lang="en">
@@ -28,7 +29,7 @@ const currentBirthdayIdol = await LL.getBirthdayIdol()
             <!-- <TopNav/> -->
             <slot></slot>
             <BottomNav client:idle></BottomNav>
-            <Footer/>
+            <Footer pathname={pathname}></Footer>
         </div>
     </body>
 </html>

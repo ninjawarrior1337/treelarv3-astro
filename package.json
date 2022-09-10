@@ -10,7 +10,6 @@
     "astro": "astro"
   },
   "devDependencies": {
-    "@astrojs/cloudflare": "^1.0.2",
     "@astrojs/prefetch": "^0.0.7",
     "@astrojs/react": "^1.1.2",
     "@astrojs/svelte": "^1.0.0",
@@ -30,6 +29,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "svelte": "^3.50.1",
+    "svelte-preprocess": "^4.10.7",
+    "svelte2tsx": "^0.5.16",
     "unplugin-icons": "^0.14.9"
   },
   "dependencies": {
@@ -37,7 +38,6 @@
     "@react-three/drei": "^9.29.1",
     "@react-three/fiber": "^8.7.2",
     "canvas-confetti": "^1.5.1",
-    "three": "^0.144.0",
-    "web-streams-polyfill": "^3.2.1"
+    "three": "^0.144.0"
   }
 }

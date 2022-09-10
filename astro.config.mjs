@@ -1,5 +1,4 @@
 import { defineConfig } from 'astro/config';
-import cloudflare from "@astrojs/cloudflare";
 import vercel from "@astrojs/vercel/edge"
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
@@ -16,7 +15,7 @@ export default defineConfig({
     }
   }), prefetch(), svelte()],
   output: "server",
-  adapter: process.env["VERCEL"] ? vercel() : cloudflare(),
+  adapter: vercel(),
   vite: {
     plugins: [Icons({
       compiler: "svelte",

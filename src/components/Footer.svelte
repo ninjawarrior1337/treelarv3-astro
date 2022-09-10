@@ -1,9 +1,11 @@
----
+<script lang="ts">
 import faBrain from "~icons/fa-solid/brain"
 import faHeart from "~icons/fa/heart"
 import ethLogo from "~icons/fa6-brands/ethereum"
 import GithubLogo from "~icons/fa6-brands/github"
 import TwitterLogo from "~icons/fa6-brands/twitter"
+
+export let pathname: string;
 
 const computeIcon = (path: string) => {
     if(path.includes("projects")) {
@@ -17,8 +19,8 @@ const computeIcon = (path: string) => {
     }
 }
 
-const CurrentIcon = computeIcon(Astro.url.pathname)
----
+const CurrentIcon = computeIcon(pathname)
+</script>
 
 <div class="bg-gradient-to-r from-muse via-treelar to-treelar h-1"></div>
 <div class="py-4 text-center w-full text-xl">
