@@ -46,6 +46,7 @@
             href="/"
             style:opacity={`${$navState.opacity}`}
             class="row-span-2 bg-black grid place-items-center content-center"
+            rel="prefetch"
         >
             <FaHome class="text-3xl" />
             <span>Home</span>
@@ -54,6 +55,7 @@
             href="/projects"
             style:opacity={`${$navState.opacity}`}
             class="row-span-2 bg-black grid place-items-center content-center"
+            rel="prefetch"
         >
             <FaBrain class="text-2xl" />
             <span>Projects</span>
@@ -67,6 +69,7 @@
             target="_blank"
             href="https://anilist.co/user/Treelar"
             class="col-span-2 bg-black grid grid-cols-2 justify-items-center items-center"
+            rel="prefetch"
         >
             <ToriiGate class="text-2xl" />
             <span>Anime</span>
