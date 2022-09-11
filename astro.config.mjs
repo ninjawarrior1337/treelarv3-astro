@@ -1,11 +1,12 @@
 import { defineConfig } from 'astro/config';
-import vercel from "@astrojs/vercel/edge"
+import vercel from "@astrojs/vercel/edge";
 import react from "@astrojs/react";
 import tailwind from "@astrojs/tailwind";
 import prefetch from "@astrojs/prefetch";
 import Icons from 'unplugin-icons/vite';
-
 import svelte from "@astrojs/svelte";
+
+import image from "@astrojs/image";
 
 // https://astro.build/config
 export default defineConfig({
@@ -13,12 +14,12 @@ export default defineConfig({
     config: {
       applyBaseStyles: false
     }
-  }), prefetch(), svelte()],
+  }), prefetch(), svelte(), image()],
   output: "server",
   adapter: vercel(),
   vite: {
     plugins: [Icons({
-      compiler: "svelte",
+      compiler: "svelte"
     })]
   },
   server: {
