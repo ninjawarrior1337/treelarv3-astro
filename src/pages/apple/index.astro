@@ -1,0 +1,22 @@
+---
+import Default from "@layouts/default.astro";
+---
+
+<script>
+    import Pusher from "pusher-js"
+
+    var pusher = new Pusher(import.meta.env.PUBLIC_PUSHER_APP_KEY, {
+        cluster: "us3"
+    })
+
+    var channel = pusher.subscribe("c")
+
+    channel.bind("e", (d) => {
+        console.log(d)
+    })
+
+</script>
+
+<Default>
+
+</Default>

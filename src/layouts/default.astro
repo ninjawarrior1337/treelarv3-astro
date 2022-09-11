@@ -1,0 +1,41 @@
+---
+import "../base.css"
+---
+
+<html lang="en">
+    <head>
+        <title>Treelar</title>
+        <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+        <meta name="generator" content={Astro.generator} />
+
+        <meta name="title" content="Hi, I'm Treelar">
+        <meta name="description" content="I make stuff, maybe useful, maybe not, depends on who you ask.">
+        <meta name="keywords" content="treelar,astro,development,personal">
+        <meta name="robots" content="index, follow">
+        <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+        <meta name="language" content="English">
+        <meta name="author" content="Treelar">
+
+        <!-- Open Graph / Facebook -->
+        <meta property="og:type" content="website">
+        <meta property="og:url" content="https://treelar.xyz/">
+        <meta property="og:title" content="Hi, I'm Treelar">
+        <meta property="og:description" content="I make stuff, maybe useful, maybe not, depends on who you ask.">
+        <meta property="og:image" content="https://gravatar.com/avatar/55255e7fac560d2630297f3d2e90b40f.png?s=2048">
+
+        <!-- Twitter -->
+        <meta property="twitter:card" content="summary_large_image">
+        <meta property="twitter:site" content="@TYNROH"/>
+        <meta property="twitter:url" content="https://treelar.xyz/">
+        <meta property="twitter:title" content="Hi, I'm Treelar">
+        <meta property="twitter:description" content="I make stuff, maybe useful, maybe not, depends on who you ask.">
+        <meta property="twitter:image" content="https://gravatar.com/avatar/55255e7fac560d2630297f3d2e90b40f.png?s=2048">
+
+
+        <link rel="icon" href="favicon.ico">
+    </head>
+    <body class="text-white bg-gray-900">
+        <slot></slot>
+    </body>
+</html>
