@@ -3,7 +3,7 @@ import {Howl, Howler} from "howler"
 import { onDestroy, onMount } from "svelte";
 
 let boom;
-let selectedInterval = 0;
+let selectedInterval = 2;
 let booming = false
 let currentTimeout: number;
 
@@ -61,13 +61,13 @@ onDestroy(() => {
         Boom Now
     </button>
     <div></div>
-    <span>Boom Interval (Boom at most every N seconds)</span>
-    <input class="bg-gray-800 border-2 rounded p-2" placeholder="Boom Interval" type="number" bind:value={selectedInterval}/>
+    <span>Boom Interval (Boom at least once sometime in the next {selectedInterval} seconds from the previous boom)</span>
+    <input class="bg-gray-800 border-2 rounded p-2" placeholder="Boom Interval" type="number" min=2 bind:value={selectedInterval}/>
     <button class="bg-muse text-5xl rounded p-4" on:click={toggleBooming}>
         {#if booming}
-            Stop Booming
+            Stop Booms
         {:else}
-            Start Booming
+            Start Booms
         {/if}
     </button>
 </div>
